@@ -95,7 +95,8 @@
         }
         
         h2 {
-            font-size: 4.2rem;
+            /* font-size: 4.2rem; */
+            font-size: 3rem;
         }
         
         ul {
@@ -126,7 +127,7 @@
             z-index: 10;
         }
         
-        .nav>h1 {
+        .nav>h2 {
             text-align: left;
         }
         
@@ -174,12 +175,26 @@
             color: var(--main-red);
         }
         
-        .welcome-section>img {
-            /* width: 1200;
-            height: 600; */
-            width: 50%;
-            height: 40%;
-            border: 2px solid black;
+        .home-image {
+            width: 100vw;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+        
+        .home-image>img {
+            width: 55%;
+            height: auto;
+            overflow: hidden;
+            border-bottom: 1px solid gray;
+        }
+        
+        .home-image-caption {
+            margin-left: 15px;
+            margin-right: 15px;
         }
         
         .skills-section {
@@ -189,13 +204,31 @@
             align-items: center;
         }
         
-        .skills-section>img {
-            /* width: 40%;
-            height: 40%; */
+        .skills-figure {
             width: 40;
             height: 40;
+            margin-left: 10%;
+            margin-right: 10%;
+            align-content: center;
+        }
+        
+        .skills-caption {
+            color: black;
+            font-size: 15;
+            text-align: center;
+        }
+        
+        .skills-section>img {
+            width: 20;
+            height: 20;
             margin-left: 1%;
             margin-right: 1%;
+        }
+        
+        .about-me {
+            font-size: 15px;
+            color: black;
+            text-align: center;
         }
         /* Projects section */
         
@@ -251,21 +284,29 @@
         .project:hover .code {
             color: #ff7f50;
         }
-        
-        .project-image {
+        /* .project-image {
             height: calc(100% - 6.8rem);
             width: 100%;
             object-fit: cover;
+        } */
+        
+        .screenshot {
+            height: 20em;
+            width: 100%;
+        }
+        
+        .screenshot>img {
+            align-items: center;
         }
         
         .project-title {
             font-size: 2rem;
-            padding: 2rem 0.5rem;
+            padding: 1rem 0.5rem;
         }
         
         .project-tech {
-            font-size: 1.5rem;
-            padding: 2rem 0.5rem;
+            font-size: 1.25rem;
+            padding: 1rem 0.5rem;
         }
         
         .btn {
@@ -381,7 +422,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:700&amp;display=swap" rel="stylesheet">
 
     <nav id="navbar" class="nav">
-        <h1>Steven Murray</h1>
+        <h2>Steven Murray</h2>
         <ul class="nav-list">
             <li>
                 <a href="#welcome-section">About</a>
@@ -397,23 +438,67 @@
 
 
     <section id="welcome-section" class="welcome-section">
-        <p>Professional Software Developer/Engineer</p>
-        <section id="skills-section" class="skills-section">
-            <img src="c-sharp-logo.png" alt="csharp">
-            <img src="vs.jpeg" alt="visualstudio">
-            <img src="nodejs.png" alt="nodejs">
-            <img src="javascript.png" alt="javascript">
-            <img src="react-native.png" alt="react">
-            <img src="html-5.png" alt="html">
-            <img src="css3.png" alt="css">
-        </section>
-        <section id="skills-section" class="skills-section">
-            <img src="postgreesql.png" alt="postgres">
-            <img src="sql.jpeg" alt="sqlserver">
-            <img src="sql.png" alt="sql">
-        </section>
+        <p>Professional Software Engineer</p>
+        <div class="skills-section">
+            <figure class="skills-figure">
+                <img src="c-sharp-logo.png" alt="csharp">
+                <figcaption class="skills-caption">C#</figcaption>
+            </figure>
+            <figure class="skills-figure">
+                <img src="vs.jpeg" alt="visualstudio">
+                <figcaption class="skills-caption">Visual Studio</figcaption>
+            </figure>
+            <figure class="skills-figure">
+                <img src="nodejs.png" alt="nodejs">
+                <figcaption class="skills-caption">NodeJS</figcaption>
+            </figure>
+            <figure class="skills-figure">
+                <img src="javascript.png" alt="javascript">
+                <figcaption class="skills-caption">Javascript</figcaption>
+            </figure>
+            <figure class="skills-figure">
+                <img src="react-native.png" alt="react">
+                <figcaption class="skills-caption">React</figcaption>
+            </figure class="skills-figure">
+            <figure class="skills-figure">
+                <img src="html-5.png" alt="html">
+                <figcaption class="skills-caption">HTML</figcaption>
+            </figure>
+            <figure class="skills-figure">
+                <img src="css3.png" alt="css">
+                <figcaption class="skills-caption">CSS</figcaption>
+            </figure>
+            <figure class="skills-figure">
+                <img src="postgreesql.png" alt="postgres">
+                <figcaption class="skills-caption">PostgreSQL</figcaption>
+            </figure>
+            <figure class="skills-figure">
+                <img src="sql.jpeg" alt="sqlserver">
+                <figcaption class="skills-caption">SQL Server</figcaption>
+            </figure>
+            <figure class="skills-figure">
+                <img src="sql.png" alt="sql">
+                <figcaption class="skills-caption">SQL</figcaption>
+            </figure>
+        </div>
         <br>
-        <img src="SAM_1323.JPG" alt="Me">
+        <!-- <div class="home-image">
+            <img src="SAM_1323.JPG" alt="Me">
+        </div> -->
+        <figure class="home-image">
+            <img src="SAM_1323.JPG" alt="Me">
+            <figcaption class="home-image-caption">
+                My interest in software engineering goes back to my time in high school, when I was deciding on a college major between computer science and aeronautical engineering. I chose computer science in the College of Business at Texas A&M, which gave me a solid
+                foundation in computer science. I am self-taught in a variety of programming languages and environments. I am married with two kids with an avid interest in building scale models, history (particularly World War II), photography, and traveling.
+            </figcaption>
+        </figure>
+        <!-- <div class="about-me">
+            <p>My interest in software engineering goes back to my time in high school, when I was deciding on a college major between computer science and aeronautical engineering. I chose computer science in the College of Business at Texas A&M, which
+                gave me a solid foundation in computer science. I am self-taught in a variety of programming languages and environments.
+            </p>
+            <p>I am married with two kids with an avid interest in building scale models, history (particularly World War II), photography, and traveling.
+            </p>
+        </div> -->
 
     </section>
 
@@ -421,67 +506,46 @@
     <section id="projects" class="projects-section">
         <h2 class="projects-section-header">These are some of my projects</h2>
         <div class="projects-grid">
-            <a href="https://codepen.io/Aggieman/full/JgPmMX" target="_blank" class="project project-tile">
-                <img class="project-image" src="https://i.postimg.cc/SnhYKfc4/CSharp.png" alt="project">
-                <p class="project-title">
-                    <span class="code">&lt;</span> C# Reference
-                    <span class="code">/&gt;</span>
-                </p>
-                <p class="project-tech">
-                    HTML with inline styling
-                </p>
-            </a>
-            <a href="https://codepen.io/Aggieman/full/wLLyKQ" target="_blank" class="project project-tile">
-                <img class="project-image" src="https://i.postimg.cc/QBDQRrfp/MyDad.png" alt="project">
-                <p class="project-title">
-                    <span class="code">&lt;</span> Tribute Page
-                    <span class="code">/&gt;</span>
-                </p>
-                <p class="project-tech">
-                    HTML with inline styling
-                </p>
-            </a>
-            <a href="https://codepen.io/Aggieman/full/EBqOaX" target="_blank" class="project project-tile">
-                <img class="project-image" src="https://i.postimg.cc/qNxh66G3/Model-Airplanes.png" alt="project">
-                <p class="project-title">
-                    <span class="code">&lt;</span> Scale Model Airplanes
-                    <span class="code">/&gt;</span>
-                </p>
-                <p class="project-tech">
-                    HTML with inline styling
-                </p>
-            </a>
-            <a href="https://codepen.io/Aggieman/full/VoQeXv" target="_blank" class="project project-tile">
-                <img class="project-image" src="https://i.postimg.cc/qNxh66G3/Model-Airplanes.png" alt="project">
-                <p class="project-title">
-                    <span class="code">&lt;</span> Random Quotes
-                    <span class="code">/&gt;</span>
-                </p>
-                <p class="project-tech">
-                    HTML, CSS, Javascript
-                </p>
-            </a>
             <a href="https://smintexas.github.io/houston-landing/index.html" target="_blank" class="project project-tile">
-                <img class="project-image" src="https://i.postimg.cc/qNxh66G3/Model-Airplanes.png" alt="project">
                 <p class="project-title">
                     <span class="code">&lt;</span> Houston Landing
                     <span class="code">/&gt;</span>
                 </p>
-                <p class="project-tech">
-                    HTML, CSS, Javascript, API, JSON
-                </p>
+                <div>
+                    <p class="project-tech">
+                        HTML, CSS, Javascript, API, JSON
+                    </p>
+                </div>
+                <div>
+                    <p class="project-tech">
+                        This is a web app intended for someone interested in moving to the Houston area to give them information on neighborhoods, schools, weather, and crime statistics to help in their decision as to where to live.
+                    </p>
+                </div>
+                <div>
+                    <img class="screenshot" src="houston-landing.png" alt="hl">
+                </div>
             </a>
             <a href="https://smintexas.github.io/blackjack/blackjack.html" target="_blank" class="project project-tile">
-                <img class="project-image" src="https://i.postimg.cc/qNxh66G3/Model-Airplanes.png" alt="project">
                 <p class="project-title">
                     <span class="code">&lt;</span> Blackjack
                     <span class="code">/&gt;</span>
                 </p>
-                <p class="project-tech">
-                    HTML, CSS, Javascript
-                </p>
+                <div>
+                    <p class="project-tech">
+                        HTML, CSS, Javascript
+                    </p>
+                </div>
+                <div>
+                    <p class="project-tech">
+                        This is a full-fledged blackjack game that plays per normal rules, deals random cards to the player, and keeps track of wins, losses, and ties.
+                    </p>
+                </div>
+                <div>
+                    <img class="screenshot" src="blackjack.png" alt="blackjack">
+                </div>
             </a>
-            <a href="https://github.com/smintexas/gscookies" target="_blank" class="project project-tile">
+
+            <!-- <a href="https://github.com/smintexas/gscookies" target="_blank" class="project project-tile">
                 <img class="project-image" src="https://i.postimg.cc/qNxh66G3/Model-Airplanes.png" alt="project">
                 <p class="project-title">
                     <span class="code">&lt;</span> Girl Scout Cookies
@@ -490,8 +554,8 @@
                 <p class="project-tech">
                     C#, SQL Server 2014
                 </p>
-            </a>
-            <a href="https://smintexas.github.io/scale-models/src/index.html" target="_blank" class="project project-tile">
+            </a> -->
+            <!-- <a href="https://smintexas.github.io/scale-models/src/index.html" target="_blank" class="project project-tile">
                 <img class="project-image" src="https://i.postimg.cc/qNxh66G3/Model-Airplanes.png" alt="project">
                 <p class="project-title">
                     <span class="code">&lt;</span> Steven's Scale Models
@@ -500,17 +564,7 @@
                 <p class="project-tech">
                     HTML, CSS
                 </p>
-            </a>
-            <a href="https://smintexas.github.io/about-me/index.html" target="_blank" class="project project-tile">
-                <img class="project-image" src="https://i.postimg.cc/qNxh66G3/Model-Airplanes.png" alt="project">
-                <p class="project-title">
-                    <span class="code">&lt;</span> About Me
-                    <span class="code">/&gt;</span>
-                </p>
-                <p class="project-tech">
-                    HTML, CSS
-                </p>
-            </a>
+            </a> -->
         </div>
     </section>
 
